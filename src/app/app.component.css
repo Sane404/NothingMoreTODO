@@ -1,0 +1,172 @@
+.container{
+    height: 100vh;
+}
+[hidden]{
+    display: none !important;
+}
+.mainbuttons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    height: 60px;
+    color: white;
+    border-bottom: 2px solid rgb(8,20,46);
+    background-color: rgba(78, 106, 167, 0.5);
+}
+.create{
+    font-size: 20px;
+    margin-right: 20px;
+    border: 1px solid rgb(8,20,46);
+    font-family: inherit;
+    transition: all .5s;
+}
+.create:hover{
+    background-color: rgb(8,20,46);
+    color:white;
+    border: 2px solid white;
+}
+.select-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.select-wrap label{
+    flex:1;
+}
+.select-wrap select{
+    flex:2;
+    font-family: inherit;
+}
+.select-wrap select:focus{
+    border: 2px solid rgb(8,20,46);
+}
+.high{  background-color:red;}
+.medium{  background-color:orange;}
+.low{ background-color: green;}
+.high,
+.medium,
+.low{ height: 10px;}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(8,20,46);
+    border: 1px solid rgb(8,20,46);
+    margin: 10px;
+}
+.card button, .form button{
+    border: 0;
+    height: 40px;
+    font-family: inherit;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+.card button:hover{
+    background-color: rgb(8,20,46);
+    color:white;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border:  1px solid rgb(8,20,46);
+    margin: 0 auto;
+    color:white;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(8,20,46);
+}
+.form button{
+    margin:10px 0;
+}
+.form button:hover{
+    background-color: rgb(8,20,46);
+    color:white;
+    border: 2px solid white;
+}
+.form input{
+    background-color: rgb(8,20,46);
+    border: 0;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    font-family: inherit;
+}
+.form input:focus,.form select:focus{
+    outline: none;
+}
+.form select{
+    background-color: rgb(8,20,46);
+    border: 0;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    font-family: inherit;
+}
+.para {
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    word-wrap: break-word;
+    flex:4;
+}
+.actions{
+    flex:1;
+    text-align: center;
+    margin: 0;
+    line-height: 30px;
+    cursor: pointer; 
+}
+.actions:hover .dropdown-content{
+    display: block;
+
+}
+.prio-button-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.para-and-actions{
+    display: flex;
+    color:white;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    color:black;
+    margin-left: 10px;
+}
+.dropdown-content div:hover{
+    background-color: rgb(8,20,46);
+    color: white;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    .cards .card{
+        width: 30%;
+    }
+  }
+  @media screen and (max-width: 768px) { /* Specific to this particular image */
+    .cards .card{
+        width: 40%;
+    }
+  }
+  @media screen and (max-width:540px) { /* Specific to this particular image */
+    .cards .card{
+        width: 90%;
+    }
+    .container{
+        height: 100vh;
+    }
+  }

@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="mainbuttons" [hidden]="hideButtons">
+    <button class="create" (click)="showForm()">Create To Do</button>
+    <div class="select-wrap">
+      <label for="filter">Filter Select</label>
+      <select #select (change)="filterCards(select.value)">
+        <option value="all">All</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+  </div>
+  <div class="form" [hidden]="!show">
+    <label for="toDo">ToDo</label>
+    <input type="text" id="toDo">
+    <label for="priority">Priority</label>
+    <select id="priority">
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
+    </select>
+    <button (click)="sendData($event)">Submit</button>
+  </div>
+  <div class="cards">
+    <div class="card" *ngFor="let card of tasksArray">
+      <div class="para-and-actions">
+        <p class="para">{{card.todo}}</p>
+        <div class="actions">
+          <span>...</span>
+          <div class="dropdown-content">
+            <div (click)="removeItem($event)">Remove</div>
+            <div (click)="editItem($event)">Edit</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+
+      </div>
+      <div class="prio-button-wrap">
+        <div [class]="card.prio"></div>
+      </div>
+    </div>
+  </div>
+</div>
