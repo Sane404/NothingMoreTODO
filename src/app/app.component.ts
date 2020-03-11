@@ -66,7 +66,6 @@ export class AppComponent implements OnInit {
   }
   }
   editItem(e){
-    // let output = <any>document.querySelector(".cards");
     let value = e.target.parentNode.parentNode.parentNode.children[0].innerHTML;
     this.index = this.tasksArray.findIndex(x => x.todo === value);
     this.showForm();
